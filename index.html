@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emverse Investments Private Limited | Multi-Asset Holding Company</title>
-    <meta name="description" content="Emverse Private Limited is a closely held asset holding entity pooling capital to invest across listed equities, commercial real estate, clean tech, and high-yield alternative assets.">
+    <meta name="description" content="Emverse Investments Private Limited is a closely held asset holding entity pooling capital to invest across listed equities, commercial real estate, clean tech, and high-yield alternative assets.">
     <style>
         :root {
             --primary: #0f172a;
@@ -25,6 +25,47 @@
             padding: 0;
         }
 
+        /* Navigation Bar */
+        nav {
+            background-color: #0b1329;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav .logo {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+        }
+
+        /* Header / Banner */
         header {
             background-color: var(--primary);
             color: #ffffff;
@@ -45,14 +86,19 @@
             color: #94a3b8;
         }
 
+        /* Containers & Page Views */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
 
-        section {
-            margin-bottom: 4rem;
+        .page-view {
+            display: none;
+        }
+
+        .page-view.active-page {
+            display: block;
         }
 
         h2 {
@@ -65,7 +111,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
@@ -73,13 +119,80 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 1.5rem;
+            overflow: hidden;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
         }
 
-        .card h3 {
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
             margin-top: 0;
             color: var(--heading);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+
+        /* Detail Page Components */
+        .detail-hero-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: #f1f5f9;
+            padding: 1.25rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .stat-box p {
+            margin: 0.25rem 0 0 0;
+            font-size: 0.875rem;
+            color: var(--text);
         }
 
         table {
@@ -139,106 +252,144 @@
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo" onclick="showPage('home')">Emverse Investments</a>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('equities')">Equities</a></li>
+            <li><a href="#" onclick="showPage('real-estate')">Commercial RE</a></li>
+            <li><a href="#" onclick="showPage('green-tech')">Green Energy</a></li>
+            <li><a href="#" onclick="showPage('agri')">Agri-Investments</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Banner -->
     <header>
-        <h1>Emverse Private Limited</h1>
+        <h1>Emverse Investments Private Limited</h1>
         <p>Building Generational Wealth Through Multi-Asset Capital Allocation</p>
     </header>
 
     <div class="container">
-        
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Emverse</h2>
-            <p><strong>Emverse Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
-            <p>Our objective is to provide a structured, institutional-grade corporate mechanism for long-term multi-asset wealth preservation and growth.</p>
-            
-            <div class="grid" style="margin-top: 2rem;">
-                <div class="card">
-                    <h3>Multi-Asset Diversification</h3>
-                    <p>Strategic distribution of capital across public equities, real estate, sustainable energy, and agri-business models to balance capital growth with income generation.</p>
-                </div>
-                <div class="card">
-                    <h3>Statutory & Governance Rigor</h3>
-                    <p>Operating strictly under the Indian Companies Act, 2013 with full corporate governance, statutory audits, and adherence to private placement limits.</p>
-                </div>
-                <div class="card">
-                    <h3>NAV-Based Transparency</h3>
-                    <p>Equity allotment and capital valuation are determined by Net Asset Value (NAV) valuations by Registered Valuers to protect all shareholders.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Asset Strategy Section -->
-        <section id="strategy">
-            <h2>Strategic Asset Allocation</h2>
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Asset Class</th>
-                            <th>Primary Focus Area</th>
-                            <th>Holding Mechanism</th>
-                            <th>Target Objective</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Capital Markets</strong></td>
-                            <td>Listed Shares, Flexi-Cap MFs, Pre-IPO Unlisted Equities</td>
-                            <td>Corporate Demat & Broking Accounts</td>
-                            <td>High Capital Appreciation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Real Assets</strong></td>
-                            <td>Commercial Properties & Industrial Spaces</td>
-                            <td>Direct Corporate Title & Lease Deeds</td>
-                            <td>Steady Cash Flow & Asset Growth</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Green Tech & Energy</strong></td>
-                            <td>Solar Rooftops, EV Infrastructure, Storage Systems</td>
-                            <td>Direct Asset Purchase / Corporate PPAs</td>
-                            <td>Stable Recurring Yields</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Agri & Alternatives</strong></td>
-                            <td>Contract Farming & Agri-Tech Ventures</td>
-                            <td>Permissible Corporate SPVs / Contracts</td>
-                            <td>Land Value & Harvest Revenue Sharing</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <!-- HOME PAGE VIEW -->
+        <div id="home" class="page-view active-page">
+            <h2>About Emverse Investments</h2>
+            <p><strong>Emverse Investments Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
 
-        <!-- Investor FAQ -->
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
+            <h2 style="margin-top: 3rem;">Explore Our Dedicated Asset Classes</h2>
+            <div class="grid">
+                
+                <!-- Capital Markets Card -->
+                <div class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQGi9uZytoLzytccwXLcQDPdhlHlKTvTcP2DV_L4rvf6PIUBANj-LSfhdhz37UxeeSJEgTx5xa22-fwGLU" alt="Stock Market" class="card-img">
+                    <div class="card-content">
+                        <h3>Capital Markets</h3>
+                        <p>Listed equities, flexi-cap mutual funds, and pre-IPO unlisted equity opportunities.</p>
+                        <a href="#" class="btn" onclick="showPage('equities')">View Asset Strategy &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Commercial RE Card -->
+                <div class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSKNxoZVeRtYnW7o7cpXnxNt6exxgM16wTddsGT5L4bonOiUsQRZzPwdYyRmAEl_WqbXvYOxvT9siI3nlc" alt="Commercial Real Estate" class="card-img">
+                    <div class="card-content">
+                        <h3>Commercial Real Estate</h3>
+                        <p>Prime commercial office suites, retail spaces, and warehouse hubs generating steady lease rental income.</p>
+                        <a href="#" class="btn" onclick="showPage('real-estate')">View Asset Strategy &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Green Tech Card -->
+                <div class="card">
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQMXAPT7FbU7hoxVPyWzfCNvmtscPNyLzTm39WGAo825IvhbQM66HPv0KhiduXKJKyqmWZ_D_unezp51rU" alt="Solar Energy" class="card-img">
+                    <div class="card-content">
+                        <h3>Green & Clean Tech</h3>
+                        <p>Commercial rooftop solar arrays, EV charging infrastructure, and grid energy storage systems.</p>
+                        <a href="#" class="btn" onclick="showPage('green-tech')">View Asset Strategy &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Agri Tech Card -->
+                <div class="card">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQaa5P1-zCwuKcvadsmkZgyVRsSLHrH6l1GyXdlgOGt2uXLmbUxKs5PdktK75yNBpqQdH9asPqjve8rhq4" alt="Agri Tech" class="card-img">
+                    <div class="card-content">
+                        <h3>Agri-Investments</h3>
+                        <p>High-yield contract farming models, modern agri-tech infrastructure, and farmland value appreciation.</p>
+                        <a href="#" class="btn" onclick="showPage('agri')">View Asset Strategy &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 style="margin-top: 4rem;">Investor Governance & FAQ</h2>
             <div class="faq-item">
-                <h4>Is Emverse Pvt Ltd a Mutual Fund or SEBI-registered AIF?</h4>
-                <p><strong>No.</strong> Emverse Private Limited is a closely held Private Limited Company incorporated under the Companies Act, 2013. It is not a public investment fund, Collective Investment Scheme (CIS), or SEBI-registered Alternative Investment Fund (AIF). It operates purely as a private corporate entity investing its balance sheet capital.</p>
+                <h4>Is Emverse Investments Private Limited a Mutual Fund or SEBI AIF?</h4>
+                <p><strong>No.</strong> Emverse Investments Private Limited is a closely held Private Limited Company under the Companies Act, 2013. It is not a public investment fund, CIS, or SEBI-registered AIF. It invests its own corporate balance sheet capital.</p>
             </div>
             <div class="faq-item">
-                <h4>How are fresh shares allotted to members?</h4>
-                <p>Share allotments and debenture issuances are executed strictly on a private placement basis (under Section 42 of the Companies Act, 2013). New shares or Compulsorily Convertible Debentures (CCDs) are priced using independent Net Asset Value (NAV) valuations by a Registered Valuer.</p>
+                <h4>How are new shares allotted to incoming partners?</h4>
+                <p>Allotments are made strictly via private placement (Section 42, Companies Act, 2013) based on Net Asset Value (NAV) valuation reports issued by Registered Valuers.</p>
             </div>
-            <div class="faq-item">
-                <h4>How is liquidity or exit managed?</h4>
-                <p>Shares carry a mandatory lock-in period as per our internal Shareholders' Agreement (SHA). Exits are facilitated through Right of First Refusal (ROFR) provisions where existing shareholders or the company buy back shares based on prevailing NAV.</p>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Legal Footer -->
-    <footer>
-        <div class="disclaimer-box">
-            <h5>LEGAL & REGULATORY DISCLAIMER</h5>
-            <p>Emverse Private Limited is a private limited company incorporated under the Indian Companies Act, 2013. Emverse is NOT a bank, Non-Banking Financial Company (NBFC), SEBI-registered Mutual Fund, Collective Investment Scheme (CIS), or Alternative Investment Fund (AIF).</p>
-            <p>Emverse Private Limited does not solicit or accept deposits, investments, or capital from the general public. Any equity share allotment or partner onboarding is conducted strictly on a private placement basis to identified private individuals in full compliance with Section 42 of the Companies Act, 2013 and applicable MCA rules. Nothing on this website constitutes financial, legal, tax, or investment advice.</p>
         </div>
-        <p style="text-align: center; margin-top: 2rem;">&copy; Emverse Private Limited. All Rights Reserved.</p>
-    </footer>
 
-</body>
-</html>
+        <!-- 1. EQUITIES PAGE VIEW -->
+        <div id="equities" class="page-view">
+            <h2>Public & Private Equities Strategy</h2>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQGi9uZytoLzytccwXLcQDPdhlHlKTvTcP2DV_L4rvf6PIUBANj-LSfhdhz37UxeeSJEgTx5xa22-fwGLU" alt="Stock Market Trading" class="detail-hero-img">
+
+            <div class="stats-grid">
+                <div class="stat-box"><h4>15% – 25%+</h4><p>Target Return CAGR</p></div>
+                <div class="stat-box"><h4>Corporate Demat</h4><p>Holding Mode</p></div>
+                <div class="stat-box"><h4>High</h4><p>Growth Profile</p></div>
+            </div>
+
+            <h3>Investment Scope & Mechanism</h3>
+            <p>At <strong>Emverse Investments Private Limited</strong>, our capital market vertical targets compounding long-term growth across public and private markets in India:</p>
+            <ul>
+                <li><strong>Listed Indian Equities:</strong> Direct equity positions in high-ROCE, fundamentally strong Indian businesses across banking, technology, manufacturing, and consumer sectors.</li>
+                <li><strong>Unlisted & Pre-IPO Shares:</strong> Strategic acquisitions of pre-IPO shares in tech and consumer unicorns through corporate transfer forms (SH-4) prior to public listing.</li>
+                <li><strong>Mutual Fund Core:</strong> Core positions in flexi-cap and index mutual funds to provide a resilient, liquid foundation.</li>
+            </ul>
+
+            <a href="#" class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</a>
+        </div>
+
+        <!-- 2. REAL ESTATE PAGE VIEW -->
+        <div id="real-estate" class="page-view">
+            <h2>Commercial Real Estate Strategy</h2>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSKNxoZVeRtYnW7o7cpXnxNt6exxgM16wTddsGT5L4bonOiUsQRZzPwdYyRmAEl_WqbXvYOxvT9siI3nlc" alt="Commercial Property" class="detail-hero-img">
+
+            <div class="stats-grid">
+                <div class="stat-box"><h4>8% – 11%</h4><p>Target Rental Yield</p></div>
+                <div class="stat-box"><h4>Direct Corporate Title</h4><p>Ownership</p></div>
+                <div class="stat-box"><h4>Quarterly</h4><p>Rental Cash Flow</p></div>
+            </div>
+
+            <h3>Property Selection & Execution</h3>
+            <p>Real estate investments provide Emverse Investments Private Limited with an asset-backed inflation hedge combined with recurring cash flow:</p>
+            <ul>
+                <li><strong>Grade-A Commercial Offices:</strong> Units located in prime IT and commercial tech parks across major Indian metro corridors.</li>
+                <li><strong>Industrial Warehousing:</strong> Strategic logistics hubs supporting India's expanding e-commerce and manufacturing supply chains.</li>
+                <li><strong>Corporate Lease Agreements:</strong> Property titles are held directly in the company's name, with long-term lock-in lease agreements yielding consistent corporate rental income.</li>
+            </ul>
+
+            <a href="#" class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</a>
+        </div>
+
+        <!-- 3. GREEN TECH PAGE VIEW -->
+        <div id="green-tech" class="page-view">
+            <h2>Green Energy & Sustainable Technology</h2>
+            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQMXAPT7FbU7hoxVPyWzfCNvmtscPNyLzTm39WGAo825IvhbQM66HPv0KhiduXKJKyqmWZ_D_unezp51rU" alt="Solar Farm Infrastructure" class="detail-hero-img">
+
+            <div class="stats-grid">
+                <div class="stat-box"><h4>12% – 16%</h4><p>Target Yield</p></div>
+                <div class="stat-box"><h4>Corporate PPA</h4><p>Structure</p></div>
+                <div class="stat-box"><h4>Moderate</h4><p>Risk Profile</p></div>
+            </div>
+
+            <h3>Clean Tech Deployment</h3>
+            <p>Our green tech allocation aligns with India's national transition toward clean energy infrastructure:</p>
+            <ul>
+                <li><strong>Commercial Solar Rooftops:</strong> Purchasing solar generation assets leased out to industrial clients under 15-to-25 year Power Purchase Agreements (PPAs).</li>
+                <li><strong>
