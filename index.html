@@ -25,7 +25,6 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: #0b1329;
             padding: 1rem 2rem;
@@ -43,7 +42,6 @@
             font-weight: 700;
             font-size: 1.25rem;
             text-decoration: none;
-            cursor: pointer;
         }
 
         nav ul {
@@ -59,15 +57,13 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
-            cursor: pointer;
             transition: color 0.2s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: #ffffff;
         }
 
-        /* Header / Banner */
         header {
             background-color: var(--primary);
             color: #ffffff;
@@ -88,19 +84,10 @@
             color: #94a3b8;
         }
 
-        /* Containers & Page Views */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
-        }
-
-        .page-view {
-            display: none;
-        }
-
-        .page-view.active-page {
-            display: block;
         }
 
         h2 {
@@ -154,49 +141,6 @@
             text-decoration: none;
             font-weight: 500;
             margin-top: 1rem;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-        }
-
-        /* Detail Page Components */
-        .detail-hero-img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .stat-box {
-            background: #f1f5f9;
-            padding: 1.25rem;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .stat-box h4 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-
-        .stat-box p {
-            margin: 0.25rem 0 0 0;
-            font-size: 0.875rem;
-            color: var(--text);
         }
 
         .faq-item {
@@ -238,135 +182,84 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
-        <a class="logo" onclick="showPage('home'); return false;">Emverse Investments</a>
+        <a href="index.html" class="logo">Emverse Investments</a>
         <ul>
-            <li><a onclick="showPage('home'); return false;">Home</a></li>
-            <li><a onclick="showPage('equities'); return false;">Equities</a></li>
-            <li><a onclick="showPage('real-estate'); return false;">Commercial RE</a></li>
-            <li><a onclick="showPage('green-tech'); return false;">Green Energy</a></li>
-            <li><a onclick="showPage('agri'); return false;">Agri-Investments</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="equities.html">Equities</a></li>
+            <li><a href="real-estate.html">Commercial RE</a></li>
+            <li><a href="green-tech.html">Green Energy</a></li>
+            <li><a href="agri.html">Agri-Investments</a></li>
         </ul>
     </nav>
 
-    <!-- Header Banner -->
     <header>
         <h1>Emverse Investments Private Limited</h1>
         <p>Building Generational Wealth Through Multi-Asset Capital Allocation</p>
     </header>
 
     <div class="container">
+        <h2>About Emverse Investments</h2>
+        <p><strong>Emverse Investments Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
 
-        <!-- HOME PAGE VIEW -->
-        <div id="home" class="page-view active-page">
-            <h2>About Emverse Investments</h2>
-            <p><strong>Emverse Investments Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
-
-            <h2 style="margin-top: 3rem;">Explore Our Dedicated Asset Classes</h2>
-            <div class="grid">
-                
-                <!-- Capital Markets Card -->
-                <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyIDatIF4mUB7LZYFYKpAuDyKOHSvUls1n2rR5VPAc5le-WLCljFAsLf5tGO2bgrUqKHN_CRZrl9BGAQ4" alt="Stock Market Trading Screen" class="card-img">
-                    <div class="card-content">
-                        <h3>Capital Markets</h3>
-                        <p>Listed equities, flexi-cap mutual funds, and pre-IPO unlisted equity opportunities.</p>
-                        <button class="btn" onclick="showPage('equities')">View Asset Strategy &rarr;</button>
-                    </div>
+        <h2 style="margin-top: 3rem;">Explore Our Dedicated Asset Classes</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Stock Market Trading Screen" class="card-img">
+                <div class="card-content">
+                    <h3>Capital Markets</h3>
+                    <p>Listed equities, flexi-cap mutual funds, and pre-IPO unlisted equity opportunities.</p>
+                    <a href="equities.html" class="btn">View Asset Strategy &rarr;</a>
                 </div>
-
-                <!-- Commercial RE Card -->
-                <div class="card">
-                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRDhon6Z1-EzdRCuMsUl2zeWK9BWM17HMZXNP-1mJc9s23a3_InmXCZYoWDABmnu7Kw5irlc00uewW1jGE" alt="Modern Commercial Office Building" class="card-img">
-                    <div class="card-content">
-                        <h3>Commercial Real Estate</h3>
-                        <p>Prime commercial office suites, retail spaces, and warehouse hubs generating steady lease rental income.</p>
-                        <button class="btn" onclick="showPage('real-estate')">View Asset Strategy &rarr;</button>
-                    </div>
-                </div>
-
-                <!-- Green Tech Card -->
-                <div class="card">
-                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSA1ToW83-iR_4zGU8ya0xTqeeCXnbj6xoPBE_NQxefpdOYo7r-SI4BTSBFgW18lIlYIavryaBSuGh7sVo" alt="Solar Panel Renewable Energy Farm" class="card-img">
-                    <div class="card-content">
-                        <h3>Green & Clean Tech</h3>
-                        <p>Commercial rooftop solar arrays, EV charging infrastructure, and grid energy storage systems.</p>
-                        <button class="btn" onclick="showPage('green-tech')">View Asset Strategy &rarr;</button>
-                    </div>
-                </div>
-
-                <!-- Agri Tech Card -->
-                <div class="card">
-                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRSvMwYS4Wu76DoeMMS2tCt1K5MzHkKFEOkwZOYDNGbmHqm2kXM-b0NO00hKymq5eGrF5E4RPo613siau0" alt="Modern Agricultural Technology Drone" class="card-img">
-                    <div class="card-content">
-                        <h3>Agri-Investments</h3>
-                        <p>High-yield contract farming models, modern agri-tech infrastructure, and farmland value appreciation.</p>
-                        <button class="btn" onclick="showPage('agri')">View Asset Strategy &rarr;</button>
-                    </div>
-                </div>
-
             </div>
 
-            <h2 style="margin-top: 4rem;">Investor Governance & FAQ</h2>
-            <div class="faq-item">
-                <h4>Is Emverse Investments Private Limited a Mutual Fund or SEBI AIF?</h4>
-                <p><strong>No.</strong> Emverse Investments Private Limited is a closely held Private Limited Company under the Companies Act, 2013. It is not a public investment fund, CIS, or SEBI-registered AIF. It invests its own corporate balance sheet capital.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Office Building" class="card-img">
+                <div class="card-content">
+                    <h3>Commercial Real Estate</h3>
+                    <p>Prime commercial office suites, retail spaces, and warehouse hubs generating steady lease rental income.</p>
+                    <a href="real-estate.html" class="btn">View Asset Strategy &rarr;</a>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>How are new shares allotted to incoming partners?</h4>
-                <p>Allotments are made strictly via private placement (Section 42, Companies Act, 2013) based on Net Asset Value (NAV) valuation reports issued by Registered Valuers.</p>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Farm Infrastructure" class="card-img">
+                <div class="card-content">
+                    <h3>Green & Clean Tech</h3>
+                    <p>Commercial rooftop solar arrays, EV charging infrastructure, and grid energy storage systems.</p>
+                    <a href="green-tech.html" class="btn">View Asset Strategy &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" alt="Agri Tech Farming" class="card-img">
+                <div class="card-content">
+                    <h3>Agri-Investments</h3>
+                    <p>High-yield contract farming models, modern agri-tech infrastructure, and farmland value appreciation.</p>
+                    <a href="agri.html" class="btn">View Asset Strategy &rarr;</a>
+                </div>
             </div>
         </div>
 
-        <!-- 1. EQUITIES PAGE VIEW -->
-        <div id="equities" class="page-view">
-            <h2>Public & Private Equities Strategy</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyIDatIF4mUB7LZYFYKpAuDyKOHSvUls1n2rR5VPAc5le-WLCljFAsLf5tGO2bgrUqKHN_CRZrl9BGAQ4" alt="Stock Market Trading Screen" class="detail-hero-img">
-
-            <div class="stats-grid">
-                <div class="stat-box"><h4>15% – 25%+</h4><p>Target Return CAGR</p></div>
-                <div class="stat-box"><h4>Corporate Demat</h4><p>Holding Mode</p></div>
-                <div class="stat-box"><h4>High</h4><p>Growth Profile</p></div>
-            </div>
-
-            <h3>Investment Scope & Mechanism</h3>
-            <p>At <strong>Emverse Investments Private Limited</strong>, our capital market vertical targets compounding long-term growth across public and private markets in India:</p>
-            <ul>
-                <li><strong>Listed Indian Equities:</strong> Direct equity positions in high-ROCE, fundamentally strong Indian businesses across banking, technology, manufacturing, and consumer sectors.</li>
-                <li><strong>Unlisted & Pre-IPO Shares:</strong> Strategic acquisitions of pre-IPO shares in tech and consumer unicorns through corporate transfer forms (SH-4) prior to public listing.</li>
-                <li><strong>Mutual Fund Core:</strong> Core positions in flexi-cap and index mutual funds to provide a resilient, liquid foundation.</li>
-            </ul>
-
-            <button class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</button>
+        <h2 style="margin-top: 4rem;">Investor Governance & FAQ</h2>
+        <div class="faq-item">
+            <h4>Is Emverse Investments Private Limited a Mutual Fund or SEBI AIF?</h4>
+            <p><strong>No.</strong> Emverse Investments Private Limited is a closely held Private Limited Company under the Companies Act, 2013. It is not a public investment fund, CIS, or SEBI-registered AIF. It invests its own corporate balance sheet capital.</p>
         </div>
-
-        <!-- 2. REAL ESTATE PAGE VIEW -->
-        <div id="real-estate" class="page-view">
-            <h2>Commercial Real Estate Strategy</h2>
-            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRDhon6Z1-EzdRCuMsUl2zeWK9BWM17HMZXNP-1mJc9s23a3_InmXCZYoWDABmnu7Kw5irlc00uewW1jGE" alt="Modern Commercial Office Building" class="detail-hero-img">
-
-            <div class="stats-grid">
-                <div class="stat-box"><h4>8% – 11%</h4><p>Target Rental Yield</p></div>
-                <div class="stat-box"><h4>Direct Corporate Title</h4><p>Ownership</p></div>
-                <div class="stat-box"><h4>Quarterly</h4><p>Rental Cash Flow</p></div>
-            </div>
-
-            <h3>Property Selection & Execution</h3>
-            <p>Real estate investments provide Emverse Investments Private Limited with an asset-backed inflation hedge combined with recurring cash flow:</p>
-            <ul>
-                <li><strong>Grade-A Commercial Offices:</strong> Units located in prime IT and commercial tech parks across major Indian metro corridors.</li>
-                <li><strong>Industrial Warehousing:</strong> Strategic logistics hubs supporting India's expanding e-commerce and manufacturing supply chains.</li>
-                <li><strong>Corporate Lease Agreements:</strong> Property titles are held directly in the company's name, with long-term lock-in lease agreements yielding consistent corporate rental income.</li>
-            </ul>
-
-            <button class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</button>
+        <div class="faq-item">
+            <h4>How are new shares allotted to incoming partners?</h4>
+            <p>Allotments are made strictly via private placement (Section 42, Companies Act, 2013) based on Net Asset Value (NAV) valuation reports issued by Registered Valuers.</p>
         </div>
+    </div>
 
-        <!-- 3. GREEN TECH PAGE VIEW -->
-        <div id="green-tech" class="page-view">
-            <h2>Green Energy & Sustainable Technology</h2>
-            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSA1ToW83-iR_4zGU8ya0xTqeeCXnbj6xoPBE_NQxefpdOYo7r-SI4BTSBFgW18lIlYIavryaBSuGh7sVo" alt="Solar Panel Renewable Energy Farm" class="detail-hero-img">
+    <footer>
+        <div class="disclaimer-box">
+            <h5>LEGAL & REGULATORY DISCLAIMER</h5>
+            <p>Emverse Investments Private Limited is a private limited company incorporated under the Indian Companies Act, 2013. Emverse Investments Private Limited is NOT a bank, Non-Banking Financial Company (NBFC), SEBI-registered Mutual Fund, Collective Investment Scheme (CIS), or Alternative Investment Fund (AIF).</p>
+            <p>Emverse Investments Private Limited does not solicit or accept deposits, investments, or capital from the general public. Any equity share allotment or partner onboarding is conducted strictly on a private placement basis to identified private individuals in full compliance with Section 42 of the Companies Act, 2013 and applicable MCA rules. Nothing on this website constitutes financial, legal, tax, or investment advice.</p>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">&copy; Emverse Investments Private Limited. All Rights Reserved.</p>
+    </footer>
 
-            <div class="stats-grid">
-                <div class="stat-box"><h4>1
+</body>
+</html>
