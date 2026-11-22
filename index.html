@@ -25,6 +25,7 @@
             padding: 0;
         }
 
+        /* Navigation Bar */
         nav {
             background-color: #0b1329;
             padding: 1rem 2rem;
@@ -64,6 +65,7 @@
             color: #ffffff;
         }
 
+        /* Header Banner */
         header {
             background-color: var(--primary);
             color: #ffffff;
@@ -84,10 +86,19 @@
             color: #94a3b8;
         }
 
+        /* Containers & View Handling */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
+        }
+
+        .page-section {
+            display: none; /* Controlled by JavaScript hash router */
+        }
+
+        .page-section.active {
+            display: block;
         }
 
         h2 {
@@ -143,109 +154,53 @@
             margin-top: 1rem;
         }
 
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 2rem;
+        }
+
+        .detail-hero-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: #f1f5f9;
+            padding: 1.25rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .stat-box p {
+            margin: 0.25rem 0 0 0;
+            font-size: 0.875rem;
+        }
+
         .faq-item {
             background: var(--card-bg);
             border: 1px solid var(--border);
             padding: 1.25rem;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-
-        .faq-item h4 {
-            margin: 0 0 0.5rem 0;
-            color: var(--heading);
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: #94a3b8;
-            padding: 3rem 2rem;
-            font-size: 0.875rem;
-        }
-
-        .disclaimer-box {
-            background-color: #1e293b;
-            border-left: 4px solid var(--accent);
-            padding: 1.25rem;
-            border-radius: 4px;
-            color: #cbd5e1;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .disclaimer-box h5 {
-            color: #ffffff;
-            margin: 0 0 0.5rem 0;
-            font-size: 1rem;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="./index.html" class="logo">Emverse Investments</a>
-        <ul>
-            <li><a href="./index.html" class="active">Home</a></li>
-            <li><a href="./equities.html">Equities</a></li>
-            <li><a href="./real-estate.html">Commercial RE</a></li>
-            <li><a href="./green-tech.html">Green Energy</a></li>
-            <li><a href="./agri.html">Agri-Investments</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>Emverse Investments Private Limited</h1>
-        <p>Building Generational Wealth Through Multi-Asset Capital Allocation</p>
-    </header>
-
-    <div class="container">
-        <h2>About Emverse Investments</h2>
-        <p><strong>Emverse Investments Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
-
-        <h2 style="margin-top: 3rem;">Explore Our Dedicated Asset Classes</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Stock Market Trading Screen" class="card-img">
-                <div class="card-content">
-                    <h3>Capital Markets</h3>
-                    <p>Listed equities, flexi-cap mutual funds, and pre-IPO unlisted equity opportunities.</p>
-                    <a href="./equities.html" class="btn">View Asset Strategy &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Office Building" class="card-img">
-                <div class="card-content">
-                    <h3>Commercial Real Estate</h3>
-                    <p>Prime commercial office suites, retail spaces, and warehouse hubs generating steady lease rental income.</p>
-                    <a href="./real-estate.html" class="btn">View Asset Strategy &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Farm Infrastructure" class="card-img">
-                <div class="card-content">
-                    <h3>Green & Clean Tech</h3>
-                    <p>Commercial rooftop solar arrays, EV charging infrastructure, and grid energy storage systems.</p>
-                    <a href="./green-tech.html" class="btn">View Asset Strategy &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" alt="Agri Tech Farming" class="card-img">
-                <div class="card-content">
-                    <h3>Agri-Investments</h3>
-                    <p>High-yield contract farming models, modern agri-tech infrastructure, and farmland value appreciation.</p>
-                    <a href="./agri.html" class="btn">View Asset Strategy &rarr;</a>
-                </div>
-            </div>
-        </div>
-
-        <h2 style="margin-top: 4rem;">Investor Governance & FAQ</h2>
-        <div class="faq-item">
-            <h4>Is Emverse Investments Private Limited a Mutual Fund or SEBI AIF?</h4>
-            <p><strong>No.</strong> Emverse Investments Private Limited is a closely held Private Limited Company under the Companies Act, 2013. It is not a public investment fund, CIS, or SEBI-registered AIF. It invests its own corporate balance sheet capital.</p>
-        </div>
-        <div class="faq-item">
-            <h4>How are new shares allotted to incoming partners?</h4>
-            <p>Allotments are made strictly via private placement (Section 42, Companies Act, 2013) based on Net Asset Value (NAV) valuation reports issued by
+            border-radius:
