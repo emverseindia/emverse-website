@@ -1,334 +1,244 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emverse Investments Private Limited | Institutional Multi-Asset Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        navy: {
-                            950: '#060c18',
-                            900: '#0a1428',
-                            800: '#112240',
-                        },
-                        gold: {
-                            400: '#e5c158',
-                            500: '#d4af37',
-                            600: '#b59224',
-                        }
-                    }
-                }
-            }
+    <title>Emverse Private Limited | Multi-Asset Holding Company</title>
+    <meta name="description" content="Emverse Private Limited is a closely held asset holding entity pooling capital to invest across listed equities, commercial real estate, clean tech, and high-yield alternative assets.">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --heading: #0f172a;
+            --border: #e2e8f0;
         }
-    </script>
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.85rem;
+            color: var(--heading);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--heading);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--card-bg);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--heading);
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--heading);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            padding: 3rem 2rem;
+            font-size: 0.875rem;
+        }
+
+        .disclaimer-box {
+            background-color: #1e293b;
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem;
+            border-radius: 4px;
+            color: #cbd5e1;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .disclaimer-box h5 {
+            color: #ffffff;
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+    </style>
 </head>
-<body class="bg-navy-950 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-navy-950/90 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-navy-950 font-serif font-bold text-xl">E</div>
-                <div>
-                    <span class="font-serif text-xl font-bold tracking-wide text-white block leading-none">EMVERSE</span>
-                    <span class="text-[10px] tracking-[0.25em] text-gold-400 uppercase block mt-0.5">Investments Pvt. Ltd.</span>
-                </div>
-            </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#strategy" class="hover:text-gold-400 transition">Strategy</a>
-                <a href="#portfolio" class="hover:text-gold-400 transition">Asset Classes</a>
-                <a href="#esg" class="hover:text-gold-400 transition">ESG Impact</a>
-                <a href="#roadmap" class="hover:text-gold-400 transition">IPO Roadmap</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button onclick="openModal('portalModal')" class="text-sm font-medium text-gold-400 hover:text-gold-300 border border-gold-500/40 px-4 py-2 rounded transition">
-                    LP Portal Login
-                </button>
-                <a href="#contact" class="hidden sm:inline-block text-sm font-semibold bg-gold-500 hover:bg-gold-400 text-navy-950 px-5 py-2 rounded transition">
-                    Inquire
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="pt-32 pb-20 md:pt-44 md:pb-28 px-6 border-b border-slate-800/60 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-navy-800/40 via-navy-950 to-navy-950">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-navy-800/80 border border-gold-500/30 text-gold-400 text-xs font-medium tracking-wider uppercase mb-6">
-                <span>Institutional Multi-Asset Management</span>
-                <span>•</span>
-                <span>SEBI & Ind AS Aligned</span>
-            </div>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                Disciplined Yield. <br class="hidden sm:inline">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-200">Institutional Scale.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Emverse Investments Private Limited deploys patient capital across high-yielding real assets, clean energy infrastructure, and structured private credit—engineered for capital preservation and long-term public market readiness.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#portfolio" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-8 py-3.5 rounded transition text-sm tracking-wide">
-                    Explore Asset Strategy
-                </a>
-                <button onclick="openModal('portalModal')" class="bg-navy-800 hover:bg-navy-800/80 text-white border border-slate-700 font-medium px-8 py-3.5 rounded transition text-sm tracking-wide">
-                    Access Investor Portal
-                </button>
-            </div>
-        </div>
-
-        <!-- Key Metrics Bar -->
-        <div class="max-w-6xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-800/80">
-            <div class="text-center">
-                <p class="text-xs uppercase tracking-widest text-slate-400 mb-1">Seed Fund Corpus</p>
-                <p class="font-serif text-3xl font-bold text-white">₹5.00 Cr</p>
-                <p class="text-xs text-gold-400 mt-1">Scaling to ₹50 Cr+ AIF Cat II</p>
-            </div>
-            <div class="text-center">
-                <p class="text-xs uppercase tracking-widest text-slate-400 mb-1">Current Net NAV</p>
-                <p class="font-serif text-3xl font-bold text-white">₹11.34 <span class="text-base font-sans font-normal text-slate-400">/ sh</span></p>
-                <p class="text-xs text-emerald-400 mt-1">$0.1358 USD (GIFT City Feeder)</p>
-            </div>
-            <div class="text-center">
-                <p class="text-xs uppercase tracking-widest text-slate-400 mb-1">Distribution Waterfall</p>
-                <p class="font-serif text-3xl font-bold text-white">8% / 20%</p>
-                <p class="text-xs text-slate-400 mt-1">Preferred Hurdle / GP Carry</p>
-            </div>
-            <div class="text-center">
-                <p class="text-xs uppercase tracking-widest text-slate-400 mb-1">Carbon Offset Impact</p>
-                <p class="font-serif text-3xl font-bold text-white">625 Tons</p>
-                <p class="text-xs text-emerald-400 mt-1">Annual CO₂e Reduction</p>
-            </div>
-        </div>
+    <header>
+        <h1>Emverse Private Limited</h1>
+        <p>Building Generational Wealth Through Multi-Asset Capital Allocation</p>
     </header>
 
-    <!-- Strategy & Governance -->
-    <section id="strategy" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-400 uppercase mb-3">Institutional Architecture</h2>
-                <h3 class="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Built for Capital Protection & Asymmetric Upside</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    Operating under a dual-class equity structure (20% Class A Founder / 80% Class B Limited Partners), Emverse aligns management incentives directly with investor returns. Every deployment is governed by Constant Proportion Portfolio Insurance (CPPI) risk guardrails.
-                </p>
-                <ul class="space-y-4 text-sm text-slate-300">
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-400 font-bold">✓</span>
-                        <span><strong>CPPI Principal Floor Protection:</strong> Hard capital floor of ₹2.488 Cr safeguarding debt service and operational continuity.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-400 font-bold">✓</span>
-                        <span><strong>Tax-Efficient Structuring:</strong> Section 80M inter-corporate dividend pass-through and Section 80LA GIFT City FPI/NRI feeder readiness.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-gold-400 font-bold">✓</span>
-                        <span><strong>20-Module Real-Time ERP:</strong> Live NAV accounting, automated waterfall distributions, and quarterly Capital Account Statements.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="bg-navy-900 border border-slate-800 p-8 rounded-xl shadow-2xl">
-                <h4 class="font-serif text-xl font-bold text-white mb-6 pb-4 border-b border-slate-800">Distribution Waterfall Structure</h4>
-                <div class="space-y-5">
-                    <div class="p-4 rounded-lg bg-navy-950/70 border border-slate-800/80">
-                        <div class="flex justify-between text-sm font-semibold text-gold-400 mb-1">
-                            <span>Tier 1: Return of Capital</span>
-                            <span>100% to LPs</span>
-                        </div>
-                        <p class="text-xs text-slate-400">All realized cash flows return 100% of contributed capital to Class B Limited Partners first.</p>
-                    </div>
-                    <div class="p-4 rounded-lg bg-navy-950/70 border border-slate-800/80">
-                        <div class="flex justify-between text-sm font-semibold text-gold-400 mb-1">
-                            <span>Tier 2: Preferred Hurdle Rate</span>
-                            <span>8.0% IRR</span>
-                        </div>
-                        <p class="text-xs text-slate-400">100% of profits distributed to LPs until an 8% compounded annual preferred return is achieved.</p>
-                    </div>
-                    <div class="p-4 rounded-lg bg-navy-950/70 border border-slate-800/80">
-                        <div class="flex justify-between text-sm font-semibold text-gold-400 mb-1">
-                            <span>Tier 3: Carried Interest Split</span>
-                            <span>80% LP / 20% GP</span>
-                        </div>
-                        <p class="text-xs text-slate-400">Residual profits above the hurdle are shared 80% to LPs and 20% to the General Partner.</p>
-                    </div>
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Emverse</h2>
+            <p><strong>Emverse Private Limited</strong> is a closely held asset holding entity incorporated under the Indian Companies Act, 2013. We pool capital to systematically invest across high-growth public & private equities, commercial real estate, clean energy infrastructure, and high-yield alternative assets in India.</p>
+            <p>Our objective is to provide a structured, institutional-grade corporate mechanism for long-term multi-asset wealth preservation and growth.</p>
+            
+            <div class="grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>Multi-Asset Diversification</h3>
+                    <p>Strategic distribution of capital across public equities, real estate, sustainable energy, and agri-business models to balance capital growth with income generation.</p>
+                </div>
+                <div class="card">
+                    <h3>Statutory & Governance Rigor</h3>
+                    <p>Operating strictly under the Indian Companies Act, 2013 with full corporate governance, statutory audits, and adherence to private placement limits.</p>
+                </div>
+                <div class="card">
+                    <h3>NAV-Based Transparency</h3>
+                    <p>Equity allotment and capital valuation are determined by Net Asset Value (NAV) valuations by Registered Valuers to protect all shareholders.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Asset Classes -->
-    <section id="portfolio" class="py-24 px-6 bg-navy-900/50 border-y border-slate-800/60">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-[0.2em] text-gold-400 uppercase mb-3">Diversified Yield Engine</h2>
-                <h3 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Multi-Asset Allocation Pillars</h3>
-                <p class="text-slate-400 text-sm md:text-base">
-                    Balancing predictable contractual cash flows with accelerated tax-shielded infrastructure and growth equities.
-                </p>
+        <!-- Asset Strategy Section -->
+        <section id="strategy">
+            <h2>Strategic Asset Allocation</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset Class</th>
+                            <th>Primary Focus Area</th>
+                            <th>Holding Mechanism</th>
+                            <th>Target Objective</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Capital Markets</strong></td>
+                            <td>Listed Shares, Flexi-Cap MFs, Pre-IPO Unlisted Equities</td>
+                            <td>Corporate Demat & Broking Accounts</td>
+                            <td>High Capital Appreciation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Real Assets</strong></td>
+                            <td>Commercial Properties & Industrial Spaces</td>
+                            <td>Direct Corporate Title & Lease Deeds</td>
+                            <td>Steady Cash Flow & Asset Growth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Green Tech & Energy</strong></td>
+                            <td>Solar Rooftops, EV Infrastructure, Storage Systems</td>
+                            <td>Direct Asset Purchase / Corporate PPAs</td>
+                            <td>Stable Recurring Yields</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agri & Alternatives</strong></td>
+                            <td>Contract Farming & Agri-Tech Ventures</td>
+                            <td>Permissible Corporate SPVs / Contracts</td>
+                            <td>Land Value & Harvest Revenue Sharing</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-navy-950 border border-slate-800 p-7 rounded-xl hover:border-gold-500/40 transition">
-                    <div class="text-gold-400 text-2xl font-serif font-bold mb-3">01</div>
-                    <h4 class="text-lg font-bold text-white mb-2">Commercial Real Estate</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Grade-A income-producing commercial properties backed by long-term corporate leases and Lease Rental Discounting (LRD) optimization.
-                    </p>
-                </div>
-                <div class="bg-navy-950 border border-slate-800 p-7 rounded-xl hover:border-gold-500/40 transition">
-                    <div class="text-gold-400 text-2xl font-serif font-bold mb-3">02</div>
-                    <h4 class="text-lg font-bold text-white mb-2">Solar & Clean Energy</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Captive rooftop and utility solar assets generating recurring PPA cash flows alongside 40% accelerated depreciation tax shields.
-                    </p>
-                </div>
-                <div class="bg-navy-950 border border-slate-800 p-7 rounded-xl hover:border-gold-500/40 transition">
-                    <div class="text-gold-400 text-2xl font-serif font-bold mb-3">03</div>
-                    <h4 class="text-lg font-bold text-white mb-2">EV Fleet Leasing</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Commercial electric mobility fleets deployed with enterprise logistics partners, capturing green mileage and 20% WDV tax benefits.
-                    </p>
-                </div>
-                <div class="bg-navy-950 border border-slate-800 p-7 rounded-xl hover:border-gold-500/40 transition">
-                    <div class="text-gold-400 text-2xl font-serif font-bold mb-3">04</div>
-                    <h4 class="text-lg font-bold text-white mb-2">SME Private Credit & Liquid</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Senior-secured SME debt instruments paired with liquid sovereign/mutual fund reserves for dynamic CPPI rebalancing.
-                    </p>
-                </div>
+        <!-- Investor FAQ -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Is Emverse Pvt Ltd a Mutual Fund or SEBI-registered AIF?</h4>
+                <p><strong>No.</strong> Emverse Private Limited is a closely held Private Limited Company incorporated under the Companies Act, 2013. It is not a public investment fund, Collective Investment Scheme (CIS), or SEBI-registered Alternative Investment Fund (AIF). It operates purely as a private corporate entity investing its balance sheet capital.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- ESG & 10-Year IPO Roadmap -->
-    <section id="roadmap" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- ESG Card -->
-            <div id="esg" class="bg-gradient-to-br from-navy-900 to-navy-950 border border-slate-800 p-8 md:p-10 rounded-xl">
-                <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Sustainability & ESG</span>
-                <h3 class="font-serif text-2xl md:text-3xl font-bold text-white mt-2 mb-4">Measurable Climate Impact</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-8">
-                    Our infrastructure portfolio directly displaces fossil-fuel grid consumption and internal combustion logistics, tracked quarterly in our ESG Impact Index.
-                </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-4 bg-navy-950 rounded-lg border border-slate-800">
-                        <p class="text-2xl font-serif font-bold text-emerald-400">625 Tons</p>
-                        <p class="text-xs text-slate-400 mt-1">CO₂ Emissions Offset / Yr</p>
-                    </div>
-                    <div class="p-4 bg-navy-950 rounded-lg border border-slate-800">
-                        <p class="text-2xl font-serif font-bold text-white">100%</p>
-                        <p class="text-xs text-slate-400 mt-1">Audited ESG Reporting</p>
-                    </div>
-                </div>
+            <div class="faq-item">
+                <h4>How are fresh shares allotted to members?</h4>
+                <p>Share allotments and debenture issuances are executed strictly on a private placement basis (under Section 42 of the Companies Act, 2013). New shares or Compulsorily Convertible Debentures (CCDs) are priced using independent Net Asset Value (NAV) valuations by a Registered Valuer.</p>
             </div>
-
-            <!-- IPO Roadmap Card -->
-            <div class="bg-gradient-to-br from-navy-900 to-navy-950 border border-slate-800 p-8 md:p-10 rounded-xl">
-                <span class="text-xs font-bold tracking-widest text-gold-400 uppercase">10-Year Institutional Horizon</span>
-                <h3 class="font-serif text-2xl md:text-3xl font-bold text-white mt-2 mb-4">Pathway to Main Board IPO</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    Every accounting entry, Ind AS fair value adjustment, and SEBI ICDR/LODR governance log is maintained from Day 1 to support public listing readiness.
-                </p>
-                <div class="space-y-3 text-xs">
-                    <div class="flex items-center justify-between p-3 bg-navy-950 rounded border border-slate-800">
-                        <span class="font-semibold text-white">Phase 1: Seed Corpus & ERP Proof</span>
-                        <span class="text-gold-400">₹5 Cr AUM</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-navy-950 rounded border border-slate-800">
-                        <span class="font-semibold text-white">Phase 2: SEBI AIF Category II & GIFT City</span>
-                        <span class="text-gold-400">₹50 Cr+ AUM</span>
-                    </div>
-                    <div class="flex items-center justify-between p-3 bg-navy-950 rounded border border-slate-800">
-                        <span class="font-semibold text-white">Phase 3: NSE / BSE Main Board Listing</span>
-                        <span class="text-emerald-400">DRHP Ready</span>
-                    </div>
-                </div>
+            <div class="faq-item">
+                <h4>How is liquidity or exit managed?</h4>
+                <p>Shares carry a mandatory lock-in period as per our internal Shareholders' Agreement (SHA). Exits are facilitated through Right of First Refusal (ROFR) provisions where existing shareholders or the company buy back shares based on prevailing NAV.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact / Inquiry -->
-    <section id="contact" class="py-20 px-6 bg-navy-900/40 border-t border-slate-800/80">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-serif text-3xl font-bold text-white mb-4">Partner With Emverse Investments</h2>
-            <p class="text-slate-400 text-sm mb-8">
-                For institutional inquiries, Family Office co-investment opportunities, or Information Memorandum requests, contact our investor relations desk.
-            </p>
-            <form onsubmit="handleContact(event)" class="grid sm:grid-cols-2 gap-4 text-left">
-                <input type="text" required placeholder="Full Name" class="bg-navy-950 border border-slate-700 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500">
-                <input type="email" required placeholder="Corporate / Investor Email" class="bg-navy-950 border border-slate-700 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500">
-                <select class="bg-navy-950 border border-slate-700 rounded px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-gold-500 sm:col-span-2">
-                    <option>Investor Category: Domestic HNI / Family Office</option>
-                    <option>Investor Category: NRI / FPI (GIFT City Feeder)</option>
-                    <option>Corporate / Debt Financing Partner</option>
-                </select>
-                <button type="submit" class="sm:col-span-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold py-3.5 rounded transition text-sm">
-                    Request Investor Dossier
-                </button>
-            </form>
-            <p id="contactSuccess" class="hidden mt-4 text-sm text-emerald-400">Thank you. Your inquiry has been logged with Emverse Investor Relations.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-10 px-6 border-t border-slate-800/80 text-center text-xs text-slate-500">
-        <p class="text-slate-400 font-medium mb-2">Emverse Investments Private Limited</p>
-        <p class="max-w-2xl mx-auto leading-relaxed">
-            Disclaimer: Information presented on emverse.in is for informational purposes for accredited and institutional investors and does not constitute a public solicitation. Investments are subject to market risks.
-        </p>
-        <p class="mt-4">© 2026 Emverse Investments Private Limited. All Rights Reserved.</p>
-    </footer>
-
-    <!-- LP Portal Login Modal -->
-    <div id="portalModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-navy-900 border border-slate-700 rounded-xl max-w-md w-full p-8 relative">
-            <button onclick="closeModal('portalModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">&times;</button>
-            <div class="text-center mb-6">
-                <span class="text-xs font-bold tracking-widest text-gold-400 uppercase">Class B Limited Partners</span>
-                <h3 class="font-serif text-2xl font-bold text-white mt-1">LP Investor Portal</h3>
-                <p class="text-xs text-slate-400 mt-1">Access Quarterly Capital Account Statements (CAS) & Live NAV</p>
-            </div>
-            <form onsubmit="handleLogin(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Registered LP Email / Folio ID</label>
-                    <input type="text" required placeholder="investor@domain.com" class="w-full bg-navy-950 border border-slate-700 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Passcode</label>
-                    <input type="password" required placeholder="••••••••" class="w-full bg-navy-950 border border-slate-700 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
-                </div>
-                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold py-2.5 rounded text-sm transition">
-                    Verify & Enter Portal
-                </button>
-            </form>
-            <p id="loginNotice" class="hidden mt-4 text-xs text-amber-300 bg-navy-950 p-3 rounded border border-amber-500/30">
-                Portal authentication connected. Please contact Fund Administration for your initial Class B LP Folio credentials.
-            </p>
-        </div>
     </div>
 
-    <script>
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-        }
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-        }
-        function handleContact(e) {
-            e.preventDefault();
-            document.getElementById('contactSuccess').classList.remove('hidden');
-        }
-        function handleLogin(e) {
-            e.preventDefault();
-            document.getElementById('loginNotice').classList.remove('hidden');
-        }
-    </script>
+    <!-- Legal Footer -->
+    <footer>
+        <div class="disclaimer-box">
+            <h5>LEGAL & REGULATORY DISCLAIMER</h5>
+            <p>Emverse Private Limited is a private limited company incorporated under the Indian Companies Act, 2013. Emverse is NOT a bank, Non-Banking Financial Company (NBFC), SEBI-registered Mutual Fund, Collective Investment Scheme (CIS), or Alternative Investment Fund (AIF).</p>
+            <p>Emverse Private Limited does not solicit or accept deposits, investments, or capital from the general public. Any equity share allotment or partner onboarding is conducted strictly on a private placement basis to identified private individuals in full compliance with Section 42 of the Companies Act, 2013 and applicable MCA rules. Nothing on this website constitutes financial, legal, tax, or investment advice.</p>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">&copy; Emverse Private Limited. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
