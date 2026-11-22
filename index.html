@@ -43,6 +43,7 @@
             font-weight: 700;
             font-size: 1.25rem;
             text-decoration: none;
+            cursor: pointer;
         }
 
         nav ul {
@@ -58,10 +59,11 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
+            cursor: pointer;
             transition: color 0.2s;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: #ffffff;
         }
 
@@ -152,6 +154,8 @@
             text-decoration: none;
             font-weight: 500;
             margin-top: 1rem;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-outline {
@@ -195,24 +199,6 @@
             color: var(--text);
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background: var(--card-bg);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background-color: #f1f5f9;
-            color: var(--heading);
-        }
-
         .faq-item {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -254,13 +240,13 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo" onclick="showPage('home')">Emverse Investments</a>
+        <a class="logo" onclick="showPage('home'); return false;">Emverse Investments</a>
         <ul>
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
-            <li><a href="#" onclick="showPage('equities')">Equities</a></li>
-            <li><a href="#" onclick="showPage('real-estate')">Commercial RE</a></li>
-            <li><a href="#" onclick="showPage('green-tech')">Green Energy</a></li>
-            <li><a href="#" onclick="showPage('agri')">Agri-Investments</a></li>
+            <li><a onclick="showPage('home'); return false;">Home</a></li>
+            <li><a onclick="showPage('equities'); return false;">Equities</a></li>
+            <li><a onclick="showPage('real-estate'); return false;">Commercial RE</a></li>
+            <li><a onclick="showPage('green-tech'); return false;">Green Energy</a></li>
+            <li><a onclick="showPage('agri'); return false;">Agri-Investments</a></li>
         </ul>
     </nav>
 
@@ -282,41 +268,41 @@
                 
                 <!-- Capital Markets Card -->
                 <div class="card">
-                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQGi9uZytoLzytccwXLcQDPdhlHlKTvTcP2DV_L4rvf6PIUBANj-LSfhdhz37UxeeSJEgTx5xa22-fwGLU" alt="Stock Market" class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyIDatIF4mUB7LZYFYKpAuDyKOHSvUls1n2rR5VPAc5le-WLCljFAsLf5tGO2bgrUqKHN_CRZrl9BGAQ4" alt="Stock Market Trading Screen" class="card-img">
                     <div class="card-content">
                         <h3>Capital Markets</h3>
                         <p>Listed equities, flexi-cap mutual funds, and pre-IPO unlisted equity opportunities.</p>
-                        <a href="#" class="btn" onclick="showPage('equities')">View Asset Strategy &rarr;</a>
+                        <button class="btn" onclick="showPage('equities')">View Asset Strategy &rarr;</button>
                     </div>
                 </div>
 
                 <!-- Commercial RE Card -->
                 <div class="card">
-                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSKNxoZVeRtYnW7o7cpXnxNt6exxgM16wTddsGT5L4bonOiUsQRZzPwdYyRmAEl_WqbXvYOxvT9siI3nlc" alt="Commercial Real Estate" class="card-img">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRDhon6Z1-EzdRCuMsUl2zeWK9BWM17HMZXNP-1mJc9s23a3_InmXCZYoWDABmnu7Kw5irlc00uewW1jGE" alt="Modern Commercial Office Building" class="card-img">
                     <div class="card-content">
                         <h3>Commercial Real Estate</h3>
                         <p>Prime commercial office suites, retail spaces, and warehouse hubs generating steady lease rental income.</p>
-                        <a href="#" class="btn" onclick="showPage('real-estate')">View Asset Strategy &rarr;</a>
+                        <button class="btn" onclick="showPage('real-estate')">View Asset Strategy &rarr;</button>
                     </div>
                 </div>
 
                 <!-- Green Tech Card -->
                 <div class="card">
-                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQMXAPT7FbU7hoxVPyWzfCNvmtscPNyLzTm39WGAo825IvhbQM66HPv0KhiduXKJKyqmWZ_D_unezp51rU" alt="Solar Energy" class="card-img">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSA1ToW83-iR_4zGU8ya0xTqeeCXnbj6xoPBE_NQxefpdOYo7r-SI4BTSBFgW18lIlYIavryaBSuGh7sVo" alt="Solar Panel Renewable Energy Farm" class="card-img">
                     <div class="card-content">
                         <h3>Green & Clean Tech</h3>
                         <p>Commercial rooftop solar arrays, EV charging infrastructure, and grid energy storage systems.</p>
-                        <a href="#" class="btn" onclick="showPage('green-tech')">View Asset Strategy &rarr;</a>
+                        <button class="btn" onclick="showPage('green-tech')">View Asset Strategy &rarr;</button>
                     </div>
                 </div>
 
                 <!-- Agri Tech Card -->
                 <div class="card">
-                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQaa5P1-zCwuKcvadsmkZgyVRsSLHrH6l1GyXdlgOGt2uXLmbUxKs5PdktK75yNBpqQdH9asPqjve8rhq4" alt="Agri Tech" class="card-img">
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRSvMwYS4Wu76DoeMMS2tCt1K5MzHkKFEOkwZOYDNGbmHqm2kXM-b0NO00hKymq5eGrF5E4RPo613siau0" alt="Modern Agricultural Technology Drone" class="card-img">
                     <div class="card-content">
                         <h3>Agri-Investments</h3>
                         <p>High-yield contract farming models, modern agri-tech infrastructure, and farmland value appreciation.</p>
-                        <a href="#" class="btn" onclick="showPage('agri')">View Asset Strategy &rarr;</a>
+                        <button class="btn" onclick="showPage('agri')">View Asset Strategy &rarr;</button>
                     </div>
                 </div>
 
@@ -336,7 +322,7 @@
         <!-- 1. EQUITIES PAGE VIEW -->
         <div id="equities" class="page-view">
             <h2>Public & Private Equities Strategy</h2>
-            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQGi9uZytoLzytccwXLcQDPdhlHlKTvTcP2DV_L4rvf6PIUBANj-LSfhdhz37UxeeSJEgTx5xa22-fwGLU" alt="Stock Market Trading" class="detail-hero-img">
+            <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTyIDatIF4mUB7LZYFYKpAuDyKOHSvUls1n2rR5VPAc5le-WLCljFAsLf5tGO2bgrUqKHN_CRZrl9BGAQ4" alt="Stock Market Trading Screen" class="detail-hero-img">
 
             <div class="stats-grid">
                 <div class="stat-box"><h4>15% – 25%+</h4><p>Target Return CAGR</p></div>
@@ -352,13 +338,13 @@
                 <li><strong>Mutual Fund Core:</strong> Core positions in flexi-cap and index mutual funds to provide a resilient, liquid foundation.</li>
             </ul>
 
-            <a href="#" class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</a>
+            <button class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</button>
         </div>
 
         <!-- 2. REAL ESTATE PAGE VIEW -->
         <div id="real-estate" class="page-view">
             <h2>Commercial Real Estate Strategy</h2>
-            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSKNxoZVeRtYnW7o7cpXnxNt6exxgM16wTddsGT5L4bonOiUsQRZzPwdYyRmAEl_WqbXvYOxvT9siI3nlc" alt="Commercial Property" class="detail-hero-img">
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRDhon6Z1-EzdRCuMsUl2zeWK9BWM17HMZXNP-1mJc9s23a3_InmXCZYoWDABmnu7Kw5irlc00uewW1jGE" alt="Modern Commercial Office Building" class="detail-hero-img">
 
             <div class="stats-grid">
                 <div class="stat-box"><h4>8% – 11%</h4><p>Target Rental Yield</p></div>
@@ -374,22 +360,13 @@
                 <li><strong>Corporate Lease Agreements:</strong> Property titles are held directly in the company's name, with long-term lock-in lease agreements yielding consistent corporate rental income.</li>
             </ul>
 
-            <a href="#" class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</a>
+            <button class="btn btn-outline" onclick="showPage('home')">&larr; Back to Home Overview</button>
         </div>
 
         <!-- 3. GREEN TECH PAGE VIEW -->
         <div id="green-tech" class="page-view">
             <h2>Green Energy & Sustainable Technology</h2>
-            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQMXAPT7FbU7hoxVPyWzfCNvmtscPNyLzTm39WGAo825IvhbQM66HPv0KhiduXKJKyqmWZ_D_unezp51rU" alt="Solar Farm Infrastructure" class="detail-hero-img">
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSA1ToW83-iR_4zGU8ya0xTqeeCXnbj6xoPBE_NQxefpdOYo7r-SI4BTSBFgW18lIlYIavryaBSuGh7sVo" alt="Solar Panel Renewable Energy Farm" class="detail-hero-img">
 
             <div class="stats-grid">
-                <div class="stat-box"><h4>12% – 16%</h4><p>Target Yield</p></div>
-                <div class="stat-box"><h4>Corporate PPA</h4><p>Structure</p></div>
-                <div class="stat-box"><h4>Moderate</h4><p>Risk Profile</p></div>
-            </div>
-
-            <h3>Clean Tech Deployment</h3>
-            <p>Our green tech allocation aligns with India's national transition toward clean energy infrastructure:</p>
-            <ul>
-                <li><strong>Commercial Solar Rooftops:</strong> Purchasing solar generation assets leased out to industrial clients under 15-to-25 year Power Purchase Agreements (PPAs).</li>
-                <li><strong>
+                <div class="stat-box"><h4>1
