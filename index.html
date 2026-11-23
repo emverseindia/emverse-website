@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Emverse Investments Private Limited is a diversified investment and business group focused on real estate, capital markets, agriculture and financial services.">
+
+  <title>Emverse Investments Private Limited | Building Assets. Creating Possibilities.</title>
+
+  <meta name="description" content="Emverse Investments Private Limited is a diversified investment and business group focused on real estate, capital markets, agriculture, plantations and financial services.">
   <meta name="keywords" content="Emverse Investments, real estate investment, property development, capital markets, agriculture, plantations, financial services, India">
   <meta name="author" content="Emverse Investments Private Limited">
   <meta name="theme-color" content="#101d35">
-  <title>Emverse Investments Private Limited | Building Assets. Creating Possibilities.</title>
 
   <style>
     :root {
@@ -24,9 +26,15 @@
       --shadow: 0 18px 50px rgba(16,29,53,.09);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +43,15 @@
       background: var(--white);
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
     .container {
       width: min(1160px, 90%);
@@ -120,7 +136,9 @@
       transition: color .2s;
     }
 
-    nav a:hover { color: var(--gold); }
+    nav a:hover {
+      color: var(--gold);
+    }
 
     .nav-cta {
       background: var(--navy);
@@ -138,10 +156,12 @@
       cursor: pointer;
     }
 
+    /* HERO */
+
     .hero {
       min-height: 620px;
       background:
-        linear-gradient(90deg, rgba(9,20,39,.94), rgba(9,20,39,.72)),
+        linear-gradient(90deg, rgba(9,20,39,.94), rgba(9,20,39,.65)),
         url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85")
         center/cover;
       display: flex;
@@ -149,7 +169,10 @@
       color: white;
     }
 
-    .hero-content { max-width: 760px; padding: 90px 0; }
+    .hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+    }
 
     .eyebrow {
       color: var(--gold-light);
@@ -220,7 +243,9 @@
       font-size: 21px;
     }
 
-    section { padding: 90px 0; }
+    section {
+      padding: 90px 0;
+    }
 
     .section-label {
       color: var(--gold);
@@ -242,6 +267,8 @@
       color: var(--muted);
       font-size: 15px;
     }
+
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -289,6 +316,8 @@
       font-size: 12px;
     }
 
+    /* BUSINESS VERTICALS */
+
     .business {
       background: var(--cream);
     }
@@ -304,49 +333,77 @@
     .business-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 24px;
     }
 
     .business-card {
       background: white;
       border: 1px solid var(--border);
-      padding: 30px;
-      transition: .25s;
+      overflow: hidden;
+      border-radius: 4px;
+      transition: .3s;
       box-shadow: 0 5px 20px rgba(16,29,53,.025);
     }
 
     .business-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
       box-shadow: var(--shadow);
       border-color: var(--gold-light);
+    }
+
+    .business-image {
+      height: 220px;
+      overflow: hidden;
+      background: #e9e5dc;
+    }
+
+    .business-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .business-card:hover .business-image img {
+      transform: scale(1.06);
+    }
+
+    .business-content {
+      padding: 25px 27px 30px;
     }
 
     .card-number {
       color: var(--gold);
       font-family: Georgia, serif;
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 25px;
+      margin-bottom: 10px;
     }
 
     .business-card h3 {
       color: var(--navy);
-      font-size: 23px;
-      margin-bottom: 14px;
+      font-size: 22px;
+      margin-bottom: 13px;
     }
 
     .business-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
       margin-bottom: 18px;
     }
 
     .card-link {
       color: var(--gold);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    .card-link:hover {
+      color: var(--navy);
+    }
+
+    /* APPROACH */
 
     .approach-grid {
       display: grid;
@@ -371,6 +428,8 @@
       font-size: 14px;
     }
 
+    /* STATEMENT */
+
     .statement {
       background: var(--navy);
       color: white;
@@ -391,6 +450,8 @@
       margin: auto;
       font-size: 15px;
     }
+
+    /* CONTACT */
 
     .contact {
       background: var(--cream);
@@ -444,7 +505,9 @@
       gap: 15px;
     }
 
-    .field { margin-bottom: 16px; }
+    .field {
+      margin-bottom: 16px;
+    }
 
     .field label {
       display: block;
@@ -454,7 +517,9 @@
       margin-bottom: 7px;
     }
 
-    .field input, .field select, .field textarea {
+    .field input,
+    .field select,
+    .field textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid var(--border);
@@ -465,7 +530,9 @@
       border-radius: 2px;
     }
 
-    .field input:focus, .field select:focus, .field textarea:focus {
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
       outline: 1px solid var(--gold);
       border-color: var(--gold);
     }
@@ -480,6 +547,8 @@
       font-size: 11px;
       margin-top: 12px;
     }
+
+    /* FOOTER */
 
     footer {
       background: #0b1528;
@@ -499,7 +568,8 @@
       margin-bottom: 15px;
     }
 
-    footer p, footer a {
+    footer p,
+    footer a {
       color: #b8c0ce;
       font-size: 13px;
     }
@@ -509,7 +579,9 @@
       margin: 8px 0;
     }
 
-    footer a:hover { color: var(--gold-light); }
+    footer a:hover {
+      color: var(--gold-light);
+    }
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.12);
@@ -529,6 +601,8 @@
       max-width: 900px;
     }
 
+    /* RESPONSIVE DESIGN */
+
     @media (max-width: 900px) {
       nav {
         display: none;
@@ -544,31 +618,102 @@
         gap: 17px;
       }
 
-      nav.open { display: flex; }
-      .menu-toggle { display: block; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .business-grid { grid-template-columns: repeat(2, 1fr); }
-      .business-heading { display: block; }
-      .business-heading .section-intro { margin-top: 12px; }
-      .about-image { min-height: 320px; }
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .business-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .business-heading {
+        display: block;
+      }
+
+      .business-heading .section-intro {
+        margin-top: 12px;
+      }
+
+      .about-image {
+        min-height: 320px;
+      }
     }
 
     @media (max-width: 600px) {
-      .topbar-inner { justify-content: center; text-align: center; }
-      .navbar { min-height: 72px; }
-      nav { top: 72px; }
-      .brand-name { font-size: 16px; }
-      .brand-mark { width: 40px; height: 40px; }
-      .hero { min-height: 560px; }
-      .hero-content { padding: 70px 0; }
-      .hero p { font-size: 15px; }
-      .btn { margin: 5px 0; }
-      .btn-outline { margin-left: 0; }
-      section { padding: 65px 0; }
-      .business-grid, .approach-grid, .principles,
-      .footer-grid, .form-row { grid-template-columns: 1fr; }
-      .contact-form { padding: 25px 20px; }
-      .footer-grid { gap: 28px; }
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .navbar {
+        min-height: 72px;
+      }
+
+      nav {
+        top: 72px;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .btn {
+        margin: 5px 0;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .business-grid,
+      .approach-grid,
+      .principles,
+      .footer-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .business-image {
+        height: 210px;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
+      }
+
+      .footer-grid {
+        gap: 28px;
+      }
     }
   </style>
 </head>
@@ -584,6 +729,7 @@
 
   <header>
     <div class="container navbar">
+
       <a class="brand" href="#home" aria-label="Emverse home">
         <div class="brand-mark">E</div>
         <div>
@@ -592,7 +738,8 @@
         </div>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
       <nav id="mainNav">
         <a href="#home">Home</a>
@@ -601,174 +748,334 @@
         <a href="#approach">Our Approach</a>
         <a href="#contact" class="nav-cta">Contact Us</a>
       </nav>
+
     </div>
   </header>
 
   <main>
+
+    <!-- HERO -->
+
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">A diversified investment and business group</div>
-          <h1>Building Assets.<br>Creating Possibilities.</h1>
+
+          <div class="eyebrow">
+            A diversified investment and business group
+          </div>
+
+          <h1>
+            Building Assets.<br>
+            Creating Possibilities.
+          </h1>
+
           <p>
-            Emverse Investments Private Limited is focused on identifying
-            opportunities, developing valuable assets and building
-            sustainable business interests across real estate, capital
-            markets, agriculture and financial services.
+            Emverse Investments Private Limited is focused on
+            identifying opportunities, developing valuable assets
+            and building sustainable business interests across
+            real estate, capital markets, agriculture and
+            financial services.
           </p>
+
           <a href="#business" class="btn">Explore Our Businesses</a>
           <a href="#contact" class="btn btn-outline">Connect With Us</a>
+
         </div>
       </div>
     </section>
 
     <div class="intro-strip">
       <div class="container">
-        <p>Long-term perspective. Responsible decisions. Sustainable value.</p>
+        <p>
+          Long-term perspective. Responsible decisions. Sustainable value.
+        </p>
       </div>
     </div>
 
+    <!-- ABOUT US -->
+
     <section id="about">
       <div class="container about-grid">
-        <div class="about-image" role="img" aria-label="Modern commercial buildings"></div>
+
+        <div class="about-image"
+          role="img"
+          aria-label="Modern commercial buildings">
+        </div>
 
         <div class="about-copy">
+
           <div class="section-label">Who We Are</div>
-          <h2 class="section-title">A vision for lasting value</h2>
+
+          <h2 class="section-title">
+            A vision for lasting value
+          </h2>
+
           <p>
-            Emverse Investments Private Limited is a diversified business
-            enterprise with interests spanning real estate, investments,
-            agriculture and financial services.
+            Emverse Investments Private Limited is a diversified
+            business enterprise with interests spanning real estate,
+            investments, agriculture and financial services.
           </p>
+
           <p>
-            We seek to build a portfolio of meaningful business activities
-            by combining thoughtful investment decisions, commercial
-            understanding and a long-term outlook.
+            We seek to build a portfolio of meaningful business
+            activities by combining thoughtful investment decisions,
+            commercial understanding and a long-term outlook.
           </p>
+
           <p>
             Our objective is to create enduring value through assets,
-            partnerships and opportunities that contribute to sustainable
-            business growth.
+            partnerships and opportunities that contribute to
+            sustainable business growth.
           </p>
 
           <div class="principles">
+
             <div class="principle">
               <strong>Integrity</strong>
               <span>Transparent and responsible conduct</span>
             </div>
+
             <div class="principle">
               <strong>Long-term Vision</strong>
               <span>Focus on enduring value creation</span>
             </div>
+
             <div class="principle">
               <strong>Diversification</strong>
               <span>Interests across multiple sectors</span>
             </div>
+
             <div class="principle">
               <strong>Professionalism</strong>
               <span>Disciplined business practices</span>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
+    <!-- BUSINESS VERTICALS WITH PICTURES -->
+
     <section class="business" id="business">
       <div class="container">
+
         <div class="business-heading">
+
           <div>
             <div class="section-label">Our Business Verticals</div>
             <h2 class="section-title">Where we focus</h2>
           </div>
+
           <p class="section-intro">
             Our business interests cover five complementary areas,
             each offering opportunities to build assets, develop
             relationships and create long-term value.
           </p>
+
         </div>
 
         <div class="business-grid">
-          <article class="business-card">
-            <div class="card-number">01</div>
-            <h3>Real Estate Investments</h3>
-            <p>
-              We focus on opportunities in commercial and income-generating
-              real estate, including properties intended for rental and
-              recurring lease income. Our approach emphasises location,
-              asset quality, tenant potential and long-term value.
-            </p>
-            <a href="#contact" class="card-link">Enquire about this division →</a>
-          </article>
+
+          <!-- 01 REAL ESTATE INVESTMENTS -->
 
           <article class="business-card">
-            <div class="card-number">02</div>
-            <h3>Real Estate Development</h3>
-            <p>
-              Our real estate interests include property acquisition,
-              purchase and sale, residential and commercial development,
-              apartment projects, rental housing and co-working spaces.
-              We aim to identify practical opportunities that respond
-              to evolving property needs.
-            </p>
-            <a href="#contact" class="card-link">Enquire about this division →</a>
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85"
+                alt="Modern commercial office buildings"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">01</div>
+
+              <h3>Real Estate Investments</h3>
+
+              <p>
+                We focus on opportunities in commercial and
+                income-generating real estate, including properties
+                intended for rental and recurring lease income.
+                Our approach emphasises location, asset quality,
+                tenant potential and long-term value.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Enquire about this division →
+              </a>
+            </div>
+
           </article>
 
-          <article class="business-card">
-            <div class="card-number">03</div>
-            <h3>Capital Markets</h3>
-            <p>
-              We have an interest in listed shares and mutual funds,
-              with an emphasis on understanding businesses, income
-              potential, diversification and long-term capital allocation.
-              All investment activity is subject to applicable laws
-              and regulatory requirements.
-            </p>
-            <a href="#contact" class="card-link">Enquire about this division →</a>
-          </article>
+          <!-- 02 REAL ESTATE DEVELOPMENT -->
 
           <article class="business-card">
-            <div class="card-number">04</div>
-            <h3>Agriculture & Plantations</h3>
-            <p>
-              We see potential in agriculture, particularly fruit-tree
-              plantations and orchard development. Our interest is in
-              productive land use, suitable crops, responsible cultivation
-              and the development of sustainable agricultural assets.
-            </p>
-            <a href="#contact" class="card-link">Enquire about this division →</a>
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                alt="Contemporary residential property development"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">02</div>
+
+              <h3>Real Estate Development</h3>
+
+              <p>
+                Our real estate interests include property acquisition,
+                purchase and sale, residential and commercial development,
+                apartment projects, rental housing and co-working spaces.
+                We aim to identify practical opportunities that respond
+                to evolving property needs.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Enquire about this division →
+              </a>
+            </div>
+
           </article>
 
-          <article class="business-card">
-            <div class="card-number">05</div>
-            <h3>Insurance & Financial Services</h3>
-            <p>
-              We aim to connect individuals and businesses with relevant
-              insurance and financing solutions through appropriate
-              authorised institutions and service providers, subject
-              to applicable regulatory permissions.
-            </p>
-            <a href="#contact" class="card-link">Enquire about this division →</a>
-          </article>
+          <!-- 03 CAPITAL MARKETS -->
 
           <article class="business-card">
-            <div class="card-number">06</div>
-            <h3>Strategic Opportunities</h3>
-            <p>
-              We remain open to evaluating business opportunities,
-              strategic collaborations and partnerships that align
-              with our areas of interest, values and long-term
-              business objectives.
-            </p>
-            <a href="#contact" class="card-link">Discuss an opportunity →</a>
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=85"
+                alt="Financial market charts and investment analysis"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">03</div>
+
+              <h3>Capital Markets</h3>
+
+              <p>
+                We have an interest in listed shares and mutual funds,
+                with an emphasis on understanding businesses, income
+                potential, diversification and long-term capital
+                allocation. All investment activity is subject to
+                applicable laws and regulatory requirements.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Enquire about this division →
+              </a>
+            </div>
+
           </article>
+
+          <!-- 04 AGRICULTURE -->
+
+          <article class="business-card">
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85"
+                alt="Green agricultural fields and plantation landscape"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">04</div>
+
+              <h3>Agriculture & Plantations</h3>
+
+              <p>
+                We see potential in agriculture, particularly
+                fruit-tree plantations and orchard development.
+                Our interest is in productive land use, suitable
+                crops, responsible cultivation and the development
+                of sustainable agricultural assets.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Enquire about this division →
+              </a>
+            </div>
+
+          </article>
+
+          <!-- 05 INSURANCE AND FINANCIAL SERVICES -->
+
+          <article class="business-card">
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=85"
+                alt="Professional financial documentation and consultation"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">05</div>
+
+              <h3>Insurance & Financial Services</h3>
+
+              <p>
+                We aim to connect individuals and businesses with
+                relevant insurance and financing solutions through
+                appropriate authorised institutions and service
+                providers, subject to applicable regulatory permissions.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Enquire about this division →
+              </a>
+            </div>
+
+          </article>
+
+          <!-- 06 STRATEGIC OPPORTUNITIES -->
+
+          <article class="business-card">
+
+            <div class="business-image">
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                alt="Business professionals collaborating on opportunities"
+                loading="lazy">
+            </div>
+
+            <div class="business-content">
+              <div class="card-number">06</div>
+
+              <h3>Strategic Opportunities</h3>
+
+              <p>
+                We remain open to evaluating business opportunities,
+                strategic collaborations and partnerships that align
+                with our areas of interest, values and long-term
+                business objectives.
+              </p>
+
+              <a href="#contact" class="card-link">
+                Discuss an opportunity →
+              </a>
+            </div>
+
+          </article>
+
         </div>
       </div>
     </section>
 
+    <!-- OUR APPROACH -->
+
     <section id="approach">
       <div class="container">
+
         <div class="section-label">Our Philosophy</div>
-        <h2 class="section-title">A disciplined approach to growth</h2>
+
+        <h2 class="section-title">
+          A disciplined approach to growth
+        </h2>
+
         <p class="section-intro">
           We believe that enduring businesses are built through
           careful evaluation, responsible execution and a commitment
@@ -776,6 +1083,7 @@
         </p>
 
         <div class="approach-grid">
+
           <div class="approach-item">
             <h3>Identify</h3>
             <p>
@@ -802,23 +1110,39 @@
               to long-term value creation.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
+    <!-- BRAND STATEMENT -->
+
     <div class="statement">
-      <h2>Building a diversified portfolio of opportunities for tomorrow.</h2>
+
+      <h2>
+        Building a diversified portfolio of opportunities for tomorrow.
+      </h2>
+
       <p>
         We believe in the value of thoughtful investment,
         responsible enterprise and a long-term perspective.
       </p>
+
     </div>
+
+    <!-- CONTACT -->
 
     <section class="contact" id="contact">
       <div class="container contact-grid">
+
         <div class="contact-info">
+
           <div class="section-label">Get In Touch</div>
-          <h2 class="section-title">Let's start a conversation</h2>
+
+          <h2 class="section-title">
+            Let's start a conversation
+          </h2>
+
           <p>
             Whether you are exploring a property opportunity,
             discussing a business collaboration or seeking
@@ -838,20 +1162,24 @@
 
           <div class="contact-detail">
             <strong>Email</strong>
-            <span>Replace with your official company email</span>
+            <span>YOUR_EMAIL@emverse.in</span>
           </div>
 
           <div class="contact-detail">
             <strong>Office Address</strong>
             <span>Add your registered or business office address</span>
           </div>
+
         </div>
 
         <div class="contact-form">
+
           <h3>Send an Enquiry</h3>
 
           <form id="enquiryForm">
+
             <div class="form-row">
+
               <div class="field">
                 <label for="name">Full Name *</label>
                 <input type="text" id="name" name="name" required>
@@ -861,6 +1189,7 @@
                 <label for="phone">Phone Number *</label>
                 <input type="tel" id="phone" name="phone" required>
               </div>
+
             </div>
 
             <div class="field">
@@ -870,6 +1199,7 @@
 
             <div class="field">
               <label for="service">Area of Interest *</label>
+
               <select id="service" name="service" required>
                 <option value="">Select an area</option>
                 <option>Real Estate Investments</option>
@@ -884,26 +1214,41 @@
 
             <div class="field">
               <label for="message">Your Message</label>
-              <textarea id="message" name="message" placeholder="Please tell us how we can assist you."></textarea>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Please tell us how we can assist you.">
+              </textarea>
             </div>
 
-            <button type="submit" class="btn">Submit Enquiry</button>
+            <button type="submit" class="btn">
+              Submit Enquiry
+            </button>
 
             <p class="form-note">
-              This demonstration form opens your email application.
-              It does not store or transmit enquiries on its own.
+              This form opens the visitor's email application.
+              It does not store or transmit enquiries automatically.
             </p>
+
           </form>
         </div>
+
       </div>
     </section>
+
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
     <div class="container">
+
       <div class="footer-grid">
+
         <div>
           <h3>EMVERSE</h3>
+
           <p>
             Emverse Investments Private Limited is a diversified
             investment and business group focused on building
@@ -913,6 +1258,7 @@
 
         <div>
           <h3>Explore</h3>
+
           <a href="#about">About Us</a>
           <a href="#business">Our Businesses</a>
           <a href="#approach">Our Approach</a>
@@ -921,81 +1267,128 @@
 
         <div>
           <h3>Our Businesses</h3>
+
           <a href="#business">Real Estate Investments</a>
           <a href="#business">Real Estate Development</a>
           <a href="#business">Capital Markets</a>
           <a href="#business">Agriculture & Plantations</a>
           <a href="#business">Financial Services</a>
         </div>
+
       </div>
 
       <p class="legal">
-        <strong>Important information:</strong> The information on this
-        website is for general corporate and informational purposes only.
-        Nothing herein constitutes investment advice, a recommendation
-        to buy or sell securities, a public offer, a solicitation for
-        deposits, or a guarantee of returns. Investments are subject
-        to market risks. Any insurance distribution, lending,
-        investment advisory, portfolio management, broking or other
-        regulated activity will be undertaken only where the company
-        or its relevant partners hold the registrations, licences
-        and permissions required under applicable Indian laws.
+        <strong>Important information:</strong>
+        The information on this website is for general corporate
+        and informational purposes only. Nothing herein constitutes
+        investment advice, a recommendation to buy or sell securities,
+        a public offer, a solicitation for deposits, or a guarantee
+        of returns. Investments are subject to market risks.
+        Any insurance distribution, lending, investment advisory,
+        portfolio management, broking or other regulated activity
+        will be undertaken only where the company or its relevant
+        partners hold the registrations, licences and permissions
+        required under applicable Indian laws.
       </p>
 
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Emverse Investments Private Limited. All rights reserved.</span>
-        <span>Building Assets. Creating Possibilities.</span>
+
+        <span>
+          © <span id="year"></span>
+          Emverse Investments Private Limited. All rights reserved.
+        </span>
+
+        <span>
+          Building Assets. Creating Possibilities.
+        </span>
+
       </div>
+
     </div>
   </footer>
 
   <script>
+
     // Mobile navigation
+
     const menuToggle = document.getElementById("menuToggle");
     const mainNav = document.getElementById("mainNav");
 
     menuToggle.addEventListener("click", function () {
+
       const isOpen = mainNav.classList.toggle("open");
+
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+
       menuToggle.textContent = isOpen ? "×" : "☰";
+
     });
 
-    // Close mobile menu after selecting a link
+    // Close navigation after clicking a menu link
+
     document.querySelectorAll("#mainNav a").forEach(function (link) {
+
       link.addEventListener("click", function () {
+
         mainNav.classList.remove("open");
+
         menuToggle.setAttribute("aria-expanded", "false");
+
         menuToggle.textContent = "☰";
+
       });
+
     });
 
-    // Current year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Automatically update copyright year
 
-    // Enquiry form: open the visitor's email application
-    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-      const recipient = "emverseindia@gmail.com";
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const service = document.getElementById("service").value;
-      const message = document.getElementById("message").value.trim();
+    // Enquiry form
 
-      const subject = encodeURIComponent("Website Enquiry - " + service);
-      const body = encodeURIComponent(
-        "New enquiry from the Emverse website\n\n" +
-        "Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
-        "Email: " + email + "\n" +
-        "Area of Interest: " + service + "\n\n" +
-        "Message:\n" + message
-      );
+    document.getElementById("enquiryForm")
+      .addEventListener("submit", function (event) {
 
-      window.location.href = "mailto:" + recipient +
-        "?subject=" + subject + "&body=" + body;
-    });
+        event.preventDefault();
+
+        // REPLACE THIS WITH YOUR REAL COMPANY EMAIL
+
+        const recipient = "YOUR_EMAIL@emverse.in";
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(
+          "Website Enquiry - " + service
+        );
+
+        const body = encodeURIComponent(
+
+          "New enquiry from the Emverse website\n\n" +
+
+          "Name: " + name + "\n" +
+
+          "Phone: " + phone + "\n" +
+
+          "Email: " + email + "\n" +
+
+          "Area of Interest: " + service + "\n\n" +
+
+          "Message:\n" + message
+
+        );
+
+        window.location.href =
+          "mailto:" + recipient +
+          "?subject=" + subject +
+          "&body=" + body;
+
+      });
+
   </script>
 
 </body>
