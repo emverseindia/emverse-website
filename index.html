@@ -88,11 +88,13 @@
       gap: 25px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    <a href="#home" class="brand" aria-label="Emverse Investments Home">
+    <img
+        src="assets/emverse-logo.jpeg"
+        alt="Emverse Investments Private Limited"
+        class="brand-logo"
+    >
+</a>
 
     .brand-mark {
       width: 46px;
@@ -716,6 +718,38 @@
       }
     }
   </style>
+
+  /* Emverse Company Logo */
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: block;
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+}
+
+/* Responsive logo for tablets and mobile */
+
+@media (max-width: 768px) {
+    .brand-logo {
+        width: 76px;
+        height: 76px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-logo {
+        width: 66px;
+        height: 66px;
+    }
+}
 </head>
 
 <body>
