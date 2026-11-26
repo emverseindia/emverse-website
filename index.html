@@ -1345,51 +1345,7 @@
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
-    // Enquiry form
-
-    document.getElementById("enquiryForm")
-      .addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        // REPLACE THIS WITH YOUR REAL COMPANY EMAIL
-
-        const recipient = "YOUR_EMAIL@emverse.in";
-
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const service = document.getElementById("service").value;
-        const message = document.getElementById("message").value.trim();
-
-        const subject = encodeURIComponent(
-          "Website Enquiry - " + service
-        );
-
-        const body = encodeURIComponent(
-
-          "New enquiry from the Emverse website\n\n" +
-
-          "Name: " + name + "\n" +
-
-          "Phone: " + phone + "\n" +
-
-          "Email: " + email + "\n" +
-
-          "Area of Interest: " + service + "\n\n" +
-
-          "Message:\n" + message
-
-        );
-
-        window.location.href =
-          "mailto:" + recipient +
-          "?subject=" + subject +
-          "&body=" + body;
-
-      });
-
+    
   </script>
 
 </body>
