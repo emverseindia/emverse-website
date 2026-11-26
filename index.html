@@ -88,13 +88,11 @@
       gap: 25px;
     }
 
-    <a href="#home" class="brand" aria-label="Emverse Investments Home">
-    <img
-        src="emverse-logo.jpeg"
-        alt="Emverse Investments Private Limited"
-        class="brand-logo"
-    >
-</a>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
     .brand-mark {
       width: 46px;
@@ -718,38 +716,6 @@
       }
     }
   </style>
-
-  /* Emverse Company Logo */
-
-.brand {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    text-decoration: none;
-}
-
-.brand-logo {
-    display: block;
-    width: 92px;
-    height: 92px;
-    object-fit: contain;
-}
-
-/* Responsive logo for tablets and mobile */
-
-@media (max-width: 768px) {
-    .brand-logo {
-        width: 76px;
-        height: 76px;
-    }
-}
-
-@media (max-width: 480px) {
-    .brand-logo {
-        width: 66px;
-        height: 66px;
-    }
-}
 </head>
 
 <body>
@@ -1209,65 +1175,63 @@
         <div class="contact-form">
 
           <h3>Send an Enquiry</h3>
-            
-<form action="https://formsubmit.co/emverseindia@gmail.com" method="POST">
 
-  <div class="form-row">
+          <form id="enquiryForm">
 
-    <div class="field">
-      <label for="name">Full Name *</label>
-      <input type="text" id="name" name="name" required>
-    </div>
+            <div class="form-row">
 
-    <div class="field">
-      <label for="phone">Phone Number *</label>
-      <input type="tel" id="phone" name="phone" required>
-    </div>
+              <div class="field">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
 
-  </div>
+              <div class="field">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
 
-  <div class="field">
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+            </div>
 
-  <div class="field">
-    <label for="service">Area of Interest *</label>
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
 
-    <select id="service" name="service" required>
-      <option value="">Select an area</option>
-      <option>Real Estate Investments</option>
-      <option>Real Estate Development</option>
-      <option>Capital Markets</option>
-      <option>Agriculture & Plantations</option>
-      <option>Insurance & Financial Services</option>
-      <option>Business Collaboration</option>
-      <option>Other Enquiry</option>
-    </select>
-  </div>
+            <div class="field">
+              <label for="service">Area of Interest *</label>
 
-  <div class="field">
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message"
-      placeholder="Please tell us how we can assist you."></textarea>
-  </div>
+              <select id="service" name="service" required>
+                <option value="">Select an area</option>
+                <option>Real Estate Investments</option>
+                <option>Real Estate Development</option>
+                <option>Capital Markets</option>
+                <option>Agriculture & Plantations</option>
+                <option>Insurance & Financial Services</option>
+                <option>Business Collaboration</option>
+                <option>Other Enquiry</option>
+              </select>
+            </div>
 
-  <input type="hidden" name="_subject"
-    value="New Enquiry - Emverse Investments Website">
+            <div class="field">
+              <label for="message">Your Message</label>
 
-  <input type="hidden" name="_template" value="table">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Please tell us how we can assist you.">
+              </textarea>
+            </div>
 
-  <input type="hidden" name="_captcha" value="true">
+            <button type="submit" class="btn">
+              Submit Enquiry
+            </button>
 
-  <button type="submit" class="btn">Send Enquiry</button>
+            <p class="form-note">
+              This form opens the visitor's email application.
+              It does not store or transmit enquiries automatically.
+            </p>
 
-  <p class="form-note">
-    Your enquiry will be submitted to Emverse Investments Private Limited.
-  </p>
-
-</form>
-
-                  
+          </form>
         </div>
 
       </div>
